@@ -1,0 +1,48 @@
+.featured-playlist-wrapper {
+  padding: 2rem;
+  
+  h2 {
+    color: white;
+  }
+
+  .featured-playlist-grid {
+    display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    width: 100%;
+    margin-top: 50px;
+    gap: 30px;
+    
+    
+    .playlist-box {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+
+      .playlist-box-image {
+        width: 100%;
+        margin-bottom: 1rem;
+        img {
+          width: 100%;
+          max-width: 100%;
+          vertical-align: middle;
+        }
+      }
+
+      .playlist-box-info {
+        color: white;
+        a {
+          text-decoration: none;
+        }
+        .playlist-tracks-number {
+          text-transform: uppercase;
+          color: rgb(155, 155, 155);
+          font-size: 12px;
+          letter-spacing: 1px;
+          margin: 5px 0px;
+        }
+      }
+    }
+  }
+}
+

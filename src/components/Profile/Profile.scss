@@ -1,0 +1,114 @@
+.profile-wrapper {
+  width: 100%;
+  padding: 2rem;
+  color: white;
+
+  .profile-content {
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    .profile-img {
+      display: block;
+      width: 150px;
+      height: 150px;
+      margin-bottom: 1rem;
+
+      img {
+        border-radius: 100%;
+        width: 100%;
+        vertical-align: middle;
+      }
+    }
+
+    h3 {
+      font-size: 50px;
+      margin: 0;
+    }
+
+    .profile-info {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .profile-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        
+        .number {
+          color: #fdd007;
+          font-weight: bold;
+          font-size: 1.5rem;
+        }
+
+        .caption {
+          color: rgb(155, 155, 155);
+          font-size: 1rem;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+}
+
+.profile-playlists {
+  padding: 2rem;
+  
+  h2 {
+    color: white;
+  }
+  
+  .profile-playlists-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    width: 100%;
+    margin-top: 50px;
+    gap: 30px;
+
+    .playlist-box {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+
+      .playlist-box-image {
+        width: 100%;
+        margin-bottom: 1rem;
+        img {
+          width: 100%;
+          max-width: 100%;
+          vertical-align: middle;
+        }
+      }
+
+      .playlist-box-info {
+        a {
+          text-decoration: none;
+          color: white;
+        }
+        .playlist-tracks-number {
+          text-transform: uppercase;
+          color: rgb(155, 155, 155);
+          font-size: 12px;
+          letter-spacing: 1px;
+          margin: 5px 0px;
+        }
+      }
+    }
+  }
+
+}
+
+
+
+@media (max-width: 375px) {
+  .profile-wrapper {
+    padding: 0;
+  }
+}

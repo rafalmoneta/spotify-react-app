@@ -1,0 +1,32 @@
+.login-wrapper {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #191919;
+  text-align: center;
+}
+
+.login-container {
+  display: block;
+  min-width: 300px;
+  
+  h1 {
+    color: #fdd007;
+  }
+}
+
+.login-btn {
+  display: block;
+  width: 160px;
+  color: white;
+  padding: 1rem 2rem;
+  margin: 30px auto;
+  transition: all .3s;
+
+  &:hover {
+    background-color: white;
+    color: black;
+  }
+}

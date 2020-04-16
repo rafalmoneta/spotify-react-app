@@ -1,0 +1,49 @@
+.top-tracks-wrapper {
+  padding: 2rem;
+
+  .top-tracks-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      color: white;
+    }
+  }
+
+  .top-tracks {
+    padding-top: 5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+.top-tracks-select {
+  position: relative;
+  display: block;
+  width: 200px;
+  height: 50px;
+  padding: 0.5rem;
+  background-color: #212121;
+  background-color: transparent;
+  font-size: 1rem;
+  color: white;
+  border: none;
+  border-bottom: 1px solid white;
+  -moz-appearance:none; /* Firefox */
+  -webkit-appearance:none; /* Safari and Chrome */
+  appearance:none;
+  outline: 0;
+  box-shadow: none;
+
+  option {
+    background-color: #212121;
+  }
+}
+
+@media (max-width: 500px) {
+  .top-tracks-header {
+    flex-direction: column;
+  }
+}

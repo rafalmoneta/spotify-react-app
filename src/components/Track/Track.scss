@@ -1,0 +1,40 @@
+.track {
+  background-color: #212121;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 1px;
+
+  .track-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    .track-left {
+      margin-left: 1rem;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      padding-right: 1px;
+      overflow: hidden;
+
+      .track-name{
+        font-size: 1.2rem;
+        color: #fdd007;
+      }
+
+      .track-artists {
+        padding-right: 1px;
+        color: #9b9b9b;
+        font-size: 14px;
+        margin-top: 3px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    }
+
+    .track-rigth {
+      margin-left: auto;
+      color: #9b9b9b;
+    }
+  }
+}
