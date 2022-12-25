@@ -4,7 +4,8 @@ import hash from "../utils/hash";
 export const authEndpoint = "https://accounts.spotify.com/authorize";
 export const CLIENT_ID = process.env.REACT_APP_CLIENT_ID;
 export const REDIRECT_URI =
-  process.env.REACT_APP_REDIRECT_URI || "http://localhost:3000";
+  process.env.REACT_APP_REDIRECT_URI ||
+  "https://rafalmoneta.github.io/spotify-react-app/";
 // export const REDIRECT_URI = "http://localhost:3000";
 
 // your application requests authorization
