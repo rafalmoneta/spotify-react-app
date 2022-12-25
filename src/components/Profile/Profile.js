@@ -1,33 +1,34 @@
-import React, { useState, useEffect } from 'react';
-import './Profile.scss';
-import { getUserInfo } from '../../spotify/spotify';
-import { Link } from 'react-router-dom';
-import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
+import React, { useState, useEffect } from "react";
+import "./Profile.scss";
+import { getUserInfo } from "../../spotify/spotify";
+import { Link } from "react-router-dom";
+import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 
 const Profile = () => {
-  const [userData, setUserData] = useState({ user: null, followed: null, playlists: null });
+  const [userData, setUserData] = useState({
+    user: null,
+    followed: null,
+    playlists: null,
+  });
 
-  useEffect(()=>{
+  useEffect(() => {
     const fetchData = async () => {
-      const {user, followed, playlists} = await getUserInfo();
-      setUserData({user, followed, playlists});
-      
-    }
+      const { user, followed, playlists } = await getUserInfo();
+      setUserData({ user, followed, playlists });
+    };
     fetchData();
-  },[])
+  }, []);
 
-  const {user, followed, playlists} = userData;
+  const { user, followed, playlists } = userData;
 
   return (
     <div>
-      {!user &&
-        <LoadingSpinner />
-      }
+      {!user && <LoadingSpinner />}
       <div className="profile-wrapper">
-        {user && 
+        {user && (
           <div className="profile-content">
             <div className="profile-img">
-              <img src={user.images[0].url} alt="profile avatar"/>
+              <img src={user?.images[0]?.url} alt="profile avatar" />
             </div>
             <h3>{user.display_name}</h3>
             <div className="profile-info">
@@ -45,35 +46,40 @@ const Profile = () => {
               </div>
             </div>
           </div>
-        }
+        )}
       </div>
       <div className="profile-playlists">
         <h2>Your spotify playlist</h2>
         <div className="profile-playlists-grid">
-          {playlists && 
+          {playlists &&
             playlists.items.map((playlist, index) => {
               return (
-                <div 
-                  className="playlist-box"
-                  key={index}
-                >
+                <div className="playlist-box" key={index}>
                   <Link className="link" to={`/playlist:${playlist.id}`}>
                     <div className="playlist-box-image">
-                      <img alt="playlist" src={playlist.images[1] ? playlist.images[1].url : playlist.images[0].url} />
+                      <img
+                        alt="playlist"
+                        src={
+                          playlist.images[1]
+                            ? playlist.images[1]?.url
+                            : playlist.images[0]?.url
+                        }
+                      />
                     </div>
                     <div className="playlist-box-info">
                       <span>{playlist.name}</span>
-                      <div className="playlist-tracks-number">{playlist.tracks.total} tracks</div>
+                      <div className="playlist-tracks-number">
+                        {playlist.tracks.total} tracks
+                      </div>
                     </div>
                   </Link>
                 </div>
-              )
-            })
-          }
+              );
+            })}
         </div>
       </div>
     </div>
   );
-}
- 
+};
+
 export default Profile;
