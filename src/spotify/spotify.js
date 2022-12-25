@@ -35,8 +35,6 @@ export const headers = {
   "Content-Type": "application/json",
 };
 
-console.log(headers);
-
 //get user
 export const getUser = () =>
   axios.get("https://api.spotify.com/v1/me", { headers });

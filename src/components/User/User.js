@@ -10,7 +10,6 @@ const User = () => {
   useEffect(()=>{
     const fetchData = async () => {
       const {user, followed, playlists} = await getUserInfo();
-      console.log({user, followed, playlists})
       setUserData({user, followed, playlists});
       
     }
